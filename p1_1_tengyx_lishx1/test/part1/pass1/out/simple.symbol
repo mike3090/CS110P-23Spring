@@ -1,0 +1,11 @@
+268435456	n
+268435460	data
+0	main
+20	main_loop
+80	main_loop_end
+88	print_hex_and_space
+116	print_newline
+132	bitrev1
+140	b1_loop
+168	b1_end
+176	bitrev2

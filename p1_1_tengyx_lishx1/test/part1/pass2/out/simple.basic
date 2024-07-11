@@ -1,0 +1,87 @@
+auipc x5 65536
+addi x5 x5 0
+lw x8 0(x5)
+auipc x9 65536
+addi x9 x9 -8
+beq x8 x0 60
+lw x10 0(x9)
+jal x1 60
+lw x10 4(x9)
+jal x1 52
+lw x10 0(x9)
+jal x1 88
+jal x1 40
+lw x10 0(x9)
+jal x1 120
+jal x1 28
+jal x1 52
+addi x8 x8 -1
+addi x9 x9 8
+jal x0 -56
+addi x10 x0 10
+ecall
+addi x11 x10 0
+addi x10 x0 34
+ecall
+addi x11 x0 32
+addi x10 x0 11
+ecall
+jalr x0 x1 0
+addi x11 x0 10
+addi x10 x0 11
+ecall
+jalr x0 x1 0
+addi x5 x0 0
+addi x6 x0 32
+beq x6 x0 28
+slli x5 x5 1
+andi x7 x10 1
+srli x10 x10 1
+add x5 x5 x7
+addi x6 x6 -1
+jal x0 -24
+addi x10 x5 0
+jalr x0 x1 0
+addi x5 x0 -1
+and x6 x10 x5
+and x7 x10 x5
+slli x6 x6 16
+srli x7 x7 16
+or x10 x6 x7
+lui x5 4080
+addi x5 x5 255
+and x6 x10 x5
+lui x5 1044496
+addi x5 x5 -256
+and x7 x10 x5
+slli x6 x6 8
+srli x7 x7 8
+or x10 x6 x7
+lui x5 61681
+addi x5 x5 -241
+and x6 x10 x5
+lui x5 986895
+addi x5 x5 240
+and x7 x10 x5
+slli x6 x6 4
+srli x7 x7 4
+or x10 x6 x7
+lui x5 209715
+addi x5 x5 819
+and x6 x10 x5
+lui x5 838861
+addi x5 x5 -820
+and x7 x10 x5
+slli x6 x6 2
+srli x7 x7 2
+or x10 x6 x7
+lui x5 349525
+addi x5 x5 1365
+and x6 x10 x5
+lui x5 699051
+addi x5 x5 -1366
+and x7 x10 x5
+slli x6 x6 1
+srli x7 x7 1
+or x10 x6 x7
+jalr x0 x1 0
